@@ -47,8 +47,6 @@ export type MqGrid = undefined | MqBoolean;
 export type MqHeight = number; // CSSLengthValue
 export type MqHorizontalViewportSegments = number;
 export type MqVerticalViewportSegments = number;
-export type MqMinHeight = MqHeight;
-export type MqMaxHeight = MqHeight;
 export type MqHover = 'none' | 'hover';
 export type MqInvertedColors = 'none' | 'inverted';
 export type MqMonochrome = undefined | number;
@@ -69,27 +67,39 @@ export type MqUpdate = 'none' | 'slow' | 'fast';
 export type MqVideoColorGamut = 'srgb' | 'p3' | 'rec2020';
 export type MqVideoDynamicRange = 'standard' | 'high';
 export type MqWidth = number; // CSSLengthValue
-export type MqMinWidth = MqWidth;
-export type MqMaxWidth = MqWidth;
 
 export interface MediaQueries {
+	'aspect-ratio': MqAspectRatio,
+	'min-aspect-ratio': MqAspectRatio,
+	'max-aspect-ratio': MqAspectRatio,
 	'any-hover': MqAnyHover,
 	'any-pointer': MqAnyPointer,
+	'color': number,
+	'min-color': number,
+	'max-color': number,
 	'color-gamut': MqColorGamut,
 	'color-index': MqColorIndex,
+	'min-color-index': MqColorIndex,
+	'max-color-index': MqColorIndex,
 	'display-mode': MqDisplayMode,
 	'dynamic-range': MqDynamicRange,
 	'environment-blending': MqEnvironmentBlending,
 	'forced-colors': MqForcedColors,
 	'grid': MqGrid,
 	'height': MqHeight,
-	'min-height': MqMinHeight,
-	'max-height': MqMaxHeight,
+	'min-height': MqHeight,
+	'max-height': MqHeight,
 	'hover': MqHover,
 	'horizontal-viewport-segments': MqHorizontalViewportSegments,
+	'min-horizontal-viewport-segments': MqHorizontalViewportSegments,
+	'max-horizontal-viewport-segments': MqHorizontalViewportSegments,
 	'vertical-viewport-segments': MqVerticalViewportSegments,
+	'min-vertical-viewport-segments': MqVerticalViewportSegments,
+	'max-vertical-viewport-segments': MqVerticalViewportSegments,
 	'inverted-colors': MqInvertedColors,
 	'monochrome': MqMonochrome,
+	'min-monochrome': MqMonochrome,
+	'max-monochrome': MqMonochrome,
 	'nav-controls': MqNavControls,
 	'orientation': MqOrientation,
 	'overflow-block': MqOverflowBlock,
@@ -101,12 +111,14 @@ export interface MediaQueries {
 	'prefers-reduced-motion': MqPrefersReducedMotion,
 	'prefers-reduced-transparency': MqPrefersReducedTransparency,
 	'resolution': MqResolution,
+	'min-resolution': MqResolution,
+	'max-resolution': MqResolution,
 	'scan': MqScan,
 	'scripting': MqScripting,
 	'update': MqUpdate,
 	'video-color-gamut': MqVideoColorGamut,
 	'video-dynamic-range': MqVideoDynamicRange,
 	'width': MqWidth,
-	'min-width': MqMinWidth,
-	'max-width': MqMaxWidth,
+	'min-width': MqWidth,
+	'max-width': MqWidth,
 }
