@@ -1,7 +1,8 @@
 # Typed CSS utils
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![GitHub deployments](https://img.shields.io/github/deployments/neoncitylights/typed-css-utils?label=deploy)](https://github.com/neoncitylights/typed-css-utils/deployments/activity_log?environment=github-pages)
+[![GitHub deployments](https://img.shields.io/github/deployments/neoncitylights/typed-css-utils/github-pages?label=deploy)](https://github.com/neoncitylights/typed-css-utils/deployments/activity_log?environment=github-pages)
 [![Node.js workflow](https://github.com/neoncitylights/typed-css-utils/actions/workflows/main.yml/badge.svg)](https://github.com/neoncitylights/typed-css-utils/actions/workflows/main.yml)
+[![NPM package](https://img.shields.io/npm/v/@neoncitylights/typed-css-utils)](https://www.npmjs.com/package/@neoncitylights/typed-css-utils)
 
 This library provides a set of utilities extending the `csstype` package to help you write typed CSS in TypeScript.
 
