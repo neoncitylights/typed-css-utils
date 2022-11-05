@@ -6,7 +6,7 @@
  * @see https://caniuse.com/matchmedia
  * @see https://w3c.github.io/csswg-drafts/cssom-view/#dom-window-matchmedia
  */
-export function matchMediaFeature<F extends MqFeature>(feature: MqFeature, value: MqFeatureValue<F>): MediaQueryList {
+export function matchMediaFeature<F extends MqFeature>(feature: F, value: MqFeatureValue<F>): MediaQueryList {
 	return window.matchMedia(`(${feature}: ${value})`);
 }
 
@@ -18,11 +18,22 @@ export type MqFeatureValue<K extends MqFeature> = MediaQueries[K];
  * @see https://www.w3.org/TR/mediaqueries-5/#valdef-media-print
  * @see https://www.w3.org/TR/mediaqueries-5/#valdef-media-screen
  */
-export type MediaType = 'all' | 'print' | 'screen';
+export type MediaType =
+	| 'all'
+	| 'print'
+	| 'screen'
+	| 'tty'
+	| 'tv'
+	| 'projection'
+	| 'handheld'
+	| 'braille'
+	| 'embossed'
+	| 'aural'
+	| 'speech';
+
 export type MediaFeatureType = 'range' | 'discrete';
 
 export type MqBoolean = 0 | 1;
-
 export type MqAspectRatio = number; // CSSRatioValue
 export type MqAnyHover = 'none' | 'hover';
 export type MqAnyPointer = 'none' | 'coarse' | 'fine';
