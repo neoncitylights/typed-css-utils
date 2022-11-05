@@ -1,25 +1,34 @@
-# Node.js & TypeScript Template
-This repository template includes the following features:
- * [Node.js](https://nodejs.org/) and [TypeScript](https://www.typescriptlang.org/) [v4.8](https://www.typescriptlang.org/docs/handbook/release-notes/overview.html) support
- * Support for [GitHub Codespaces](https://github.com/features/codespaces)
- * Support for [JetBrains IDEs](https://www.jetbrains.com/)
- * *Continuous integration* with [GitHub Actions](https://github.com/features/actions) and [Codesandbox CI](https://codesandbox.io/ci)
- * *Auto-bundling and minification* of source code with [Webpack](https://webpack.js.org/)
- * *Auto-generated documentation* of TS code with [TypeDoc](https://typedoc.org/)
- * *Auto-formatted code* with [ESLint](https://eslint.org/)
- * *Unit tests* with [Jest](https://jestjs.io/) framework
- * *Dependency updates* with [Renovate](https://github.com/marketplace/renovate)
-
-# {library-name}
+# Typed CSS utils
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![GitHub deployments](https://img.shields.io/github/deployments/samantha-labs/ts-scale/github-pages?label=deploy)](https://github.com/samantha-labs/ts-scale/deployments/activity_log?environment=github-pages)
-[![Node.js workflow](https://github.com/samantha-labs/node-ts-template/actions/workflows/main.yml/badge.svg)](https://github.com/samantha-labs/node-ts-template/actions/workflows/main.yml)
+[![GitHub deployments](https://img.shields.io/github/deployments/neoncitylights/typed-css-utils?label=deploy)](https://github.com/neoncitylights/typed-css-utils/deployments/activity_log?environment=github-pages)
+[![Node.js workflow](https://github.com/neoncitylights/typed-css-utils/actions/workflows/main.yml/badge.svg)](https://github.com/neoncitylights/typed-css-utils/actions/workflows/main.yml)
 
-Describe the library.
+This library provides a set of utilities extending the `csstype` package to help you write typed CSS in TypeScript.
+
+Currently, there's basic support for the following W3C standards:
+ - **CSS Conditionals Level 3** (`css-conditional-3`): [Editor's Draft](https://drafts.csswg.org/css-conditional-3/), [CRS](https://www.w3.org/TR/css-conditional-3/)
+ - **CSS Media Queries Level 5** (`mediaqueries-5`): [Editor's Draft](https://drafts.csswg.org/mediaqueries-5/), [WD](https://www.w3.org/TR/mediaqueries-5/)
 
 ## Install
 ```
-npm install @samantha-labs/{library-name}
+npm install @neoncitylights/css-typed-utils
+```
+
+## Usage
+Using TypeScript, you can receive type intelliSense, which provides autocomplete suggestions for:
+ - CSS property names and values (through `csstype`)
+ - Media feature names (e.g `@prefers-color-scheme`, `aspect-ratio`)
+
+```ts
+import { matchMediaFeature, cssSupports } from '@neoncitylights/css-typed-utils';
+
+// equivalent to window.matchMedia('(prefers-color-scheme: dark)');
+const userPrefersDark: MediaQueryList = matchMediaFeature('prefers-color-scheme', 'dark');
+
+// TypeScript support, which provides strongly typed CSS property
+// names and values using the `csstype` package
+const supportsGrid: boolean = cssSupports('display', 'grid');
+const supportsFlex: boolean = cssSupports('display', 'flex');
 ```
 
 ## License
