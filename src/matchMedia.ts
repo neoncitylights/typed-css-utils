@@ -32,93 +32,134 @@ export type MediaType =
 	| 'speech';
 
 export type MediaFeatureType = 'range' | 'discrete';
-
 export type MqBoolean = 0 | 1;
+
+// Viewport/page characteristics media features
+// @see https://drafts.csswg.org/mediaqueries-5/#mf-viewport-characteristics
+
 export type MqAspectRatio = number; // CSSRatioValue
-export type MqAnyHover = 'none' | 'hover';
-export type MqAnyPointer = 'none' | 'coarse' | 'fine';
-export type MqColorGamut = 'srgb' | 'p3' | 'rec2020';
-export type MqColorIndex = number;
-export type MqDisplayMode = 'fullscreen' | 'standalone' | 'minimal-ui' | 'browser' | 'windows-controls-overlay';
-export type MqDynamicRange = 'standard' | 'high';
-export type MqEnvironmentBlending = 'opaque' | 'additive' | 'subtractive';
-export type MqForcedColors = 'none' | 'active';
-export type MqGrid = undefined | MqBoolean;
 export type MqHeight = number; // CSSLengthValue
-export type MqHorizontalViewportSegments = number;
-export type MqVerticalViewportSegments = number;
-export type MqHover = 'none' | 'hover';
-export type MqInvertedColors = 'none' | 'inverted';
-export type MqMonochrome = undefined | number;
-export type MqNavControls = 'none' | 'back';
+export type MqWidth = number; // CSSLengthValue
 export type MqOrientation = 'portrait' | 'landscape';
 export type MqOverflowBlock = 'none' | 'scroll' | 'optional-paged' | 'paged';
 export type MqOverflowInline = 'none' | 'scroll';
+export type MqHorizontalViewportSegments = number;
+export type MqVerticalViewportSegments = number;
+export type MqDisplayMode = 'fullscreen' | 'standalone' | 'minimal-ui' | 'browser' | 'windows-controls-overlay';
+
+// Display quality media features
+// @see https://drafts.csswg.org/mediaqueries-5/#mf-display-quality
+
+export type MqResolution = number; // CSSResolutionValue
+export type MqScan = 'interlace' | 'progressive';
+export type MqGrid = undefined | MqBoolean;
+export type MqUpdate = 'none' | 'slow' | 'fast';
+export type MqEnvironmentBlending = 'opaque' | 'additive' | 'subtractive';
+
+// Color media features
+// @see https://drafts.csswg.org/mediaqueries-5/#mf-color
+
+export type MqColor = number;
+export type MqColorIndex = number;
+export type MqMonochrome = undefined | number;
+export type MqColorGamut = 'srgb' | 'p3' | 'rec2020';
+export type MqDynamicRange = 'standard' | 'high';
+export type MqInvertedColors = 'none' | 'inverted';
+
+// Interaction media features
+// @see https://drafts.csswg.org/mediaqueries-5/#mf-interaction
+
 export type MqPointer = 'none' | 'coarse' | 'fine';
+export type MqHover = 'none' | 'hover';
+export type MqAnyPointer = 'none' | 'coarse' | 'fine';
+export type MqAnyHover = 'none' | 'hover';
+export type MqNavControls = 'none' | 'back';
+
+// Video media features
+// @see https://drafts.csswg.org/mediaqueries-5/#video-prefixed-features
+
+export type MqVideoColorGamut = 'srgb' | 'p3' | 'rec2020';
+export type MqVideoDynamicRange = 'standard' | 'high';
+
+// Scripting media features
+// @see https://drafts.csswg.org/mediaqueries-5/#mf-scripting
+
+export type MqScripting = 'none' | 'initial-only' | 'enabled';
+
+// User preference media features
+// @see https://drafts.csswg.org/mediaqueries-5/#mf-user-preferences
+
 export type MqPrefersColorScheme = 'light' | 'dark';
 export type MqPrefersContrast = 'no-preference' | 'more' | 'less' | 'custom';
+export type MqForcedColors = 'none' | 'active';
 export type MqPrefersReducedData = 'no-preference' | 'reduce';
 export type MqPrefersReducedMotion = 'no-preference' | 'reduce';
 export type MqPrefersReducedTransparency = 'no-preference' | 'reduce';
-export type MqResolution = number; // CSSResolutionValue
-export type MqScan = 'interlace' | 'progressive';
-export type MqScripting = 'none' | 'initial-only' | 'enabled';
-export type MqUpdate = 'none' | 'slow' | 'fast';
-export type MqVideoColorGamut = 'srgb' | 'p3' | 'rec2020';
-export type MqVideoDynamicRange = 'standard' | 'high';
-export type MqWidth = number; // CSSLengthValue
 
 export interface MediaQueries {
+	// Viewport/page characteristics media features
 	'aspect-ratio': MqAspectRatio,
 	'min-aspect-ratio': MqAspectRatio,
 	'max-aspect-ratio': MqAspectRatio,
-	'any-hover': MqAnyHover,
-	'any-pointer': MqAnyPointer,
-	'color': number,
-	'min-color': number,
-	'max-color': number,
-	'color-gamut': MqColorGamut,
-	'color-index': MqColorIndex,
-	'min-color-index': MqColorIndex,
-	'max-color-index': MqColorIndex,
-	'display-mode': MqDisplayMode,
-	'dynamic-range': MqDynamicRange,
-	'environment-blending': MqEnvironmentBlending,
-	'forced-colors': MqForcedColors,
-	'grid': MqGrid,
 	'height': MqHeight,
 	'min-height': MqHeight,
 	'max-height': MqHeight,
-	'hover': MqHover,
+	'width': MqWidth,
+	'min-width': MqWidth,
+	'max-width': MqWidth,
+	'orientation': MqOrientation,
+	'overflow-block': MqOverflowBlock,
+	'overflow-inline': MqOverflowInline,
 	'horizontal-viewport-segments': MqHorizontalViewportSegments,
 	'min-horizontal-viewport-segments': MqHorizontalViewportSegments,
 	'max-horizontal-viewport-segments': MqHorizontalViewportSegments,
 	'vertical-viewport-segments': MqVerticalViewportSegments,
 	'min-vertical-viewport-segments': MqVerticalViewportSegments,
 	'max-vertical-viewport-segments': MqVerticalViewportSegments,
-	'inverted-colors': MqInvertedColors,
-	'monochrome': MqMonochrome,
-	'min-monochrome': MqMonochrome,
-	'max-monochrome': MqMonochrome,
-	'nav-controls': MqNavControls,
-	'orientation': MqOrientation,
-	'overflow-block': MqOverflowBlock,
-	'overflow-inline': MqOverflowInline,
-	'pointer': MqPointer,
-	'prefers-color-scheme': MqPrefersColorScheme,
-	'prefers-contrast': MqPrefersContrast,
-	'prefers-reduced-data': MqPrefersReducedData,
-	'prefers-reduced-motion': MqPrefersReducedMotion,
-	'prefers-reduced-transparency': MqPrefersReducedTransparency,
+	'display-mode': MqDisplayMode,
+
+	// Display quality media features
 	'resolution': MqResolution,
 	'min-resolution': MqResolution,
 	'max-resolution': MqResolution,
 	'scan': MqScan,
-	'scripting': MqScripting,
+	'grid': MqGrid,
 	'update': MqUpdate,
+	'environment-blending': MqEnvironmentBlending,
+
+	// Color media features
+	'color': MqColor,
+	'min-color': MqColor,
+	'max-color': MqColor,
+	'color-index': MqColorIndex,
+	'monochrome': MqMonochrome,
+	'min-monochrome': MqMonochrome,
+	'max-monochrome': MqMonochrome,
+	'color-gamut': MqColorGamut,
+	'min-color-index': MqColorIndex,
+	'max-color-index': MqColorIndex,
+	'dynamic-range': MqDynamicRange,
+	'inverted-colors': MqInvertedColors,
+
+	// Interaction media features
+	'pointer': MqPointer,
+	'hover': MqHover,
+	'any-pointer': MqAnyPointer,
+	'any-hover': MqAnyHover,
+	'nav-controls': MqNavControls,
+
+	// Video media features
 	'video-color-gamut': MqVideoColorGamut,
 	'video-dynamic-range': MqVideoDynamicRange,
-	'width': MqWidth,
-	'min-width': MqWidth,
-	'max-width': MqWidth,
+
+	// Scripting media features
+	'scripting': MqScripting,
+
+	// User preference media features
+	'prefers-color-scheme': MqPrefersColorScheme,
+	'prefers-contrast': MqPrefersContrast,
+	'forced-colors': MqForcedColors,
+	'prefers-reduced-data': MqPrefersReducedData,
+	'prefers-reduced-motion': MqPrefersReducedMotion,
+	'prefers-reduced-transparency': MqPrefersReducedTransparency,
 }
