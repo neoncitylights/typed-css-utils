@@ -12,7 +12,7 @@ Currently, there's basic support for the following W3C standards:
 
 ## Install
 ```
-npm install @neoncitylights/css-typed-utils
+npm install @neoncitylights/typed-css-utils
 ```
 
 ## Usage
@@ -21,7 +21,7 @@ Using TypeScript, you can receive type intelliSense, which provides autocomplete
  - Media feature names (e.g `@prefers-color-scheme`, `aspect-ratio`)
 
 ```ts
-import { matchMediaFeature, cssSupports } from '@neoncitylights/css-typed-utils';
+import { matchMediaFeature, cssSupports } from '@neoncitylights/typed-css-utils';
 
 // equivalent to window.matchMedia('(prefers-color-scheme: dark)');
 const userPrefersDark: MediaQueryList = matchMediaFeature('prefers-color-scheme', 'dark');
