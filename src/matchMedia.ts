@@ -1,4 +1,17 @@
 /**
+ * A thin TypeScript wrapper over the `window.matchMedia()` API,
+ * providing intelliSense for names and values of media query features.
+ * 
+ * @example
+ * ```ts
+ * import { matchmediaFeature } from '@neoncitylights/typed-css-utils`;
+ * 
+ * const userPrefersDark: MediaQueryList = matchMediaFeature('prefers-color-scheme', 'dark');
+ * const prefersLessMotion: MediaQueryList = matchMediaFeature('prefers-reduced-motion', 'reduce');
+ * ```
+ * @note Global browser support is at 99.65% global support as of
+ * November 2022, and therefore stable to use.
+ * 
  * | Chrome  |   Edge   | Safari  | Firefox  |  Opera   |
  * | :-----: | :------: | :-----: | :------: | :------: |
  * |  **9**  |  **12**  | **5.1** | **12.1** | **12.1** |
@@ -14,6 +27,15 @@ export type MqFeature = keyof MediaQueries;
 export type MqFeatureValue<K extends MqFeature> = MediaQueries[K];
 
 /**
+ * A category of user-agent (UA) devices on which a document can be displayed.
+ * The main three categories that are usable in media queries are:
+ *  - `all` - All devices.
+ *  - `print` - Printers, and devices intended to reproduce a printed display.
+ *  - `screen` -  All devices not matched by `print`.
+ *
+ * @note The media types `tty`, `tv`, `projection`, `handheld`, `braille`,
+ * `embossed`, `speech`, and `aural` are not usable in media queries; user
+ * agents must make them match nothing.
  * @see https://www.w3.org/TR/mediaqueries-5/#valdef-media-all
  * @see https://www.w3.org/TR/mediaqueries-5/#valdef-media-print
  * @see https://www.w3.org/TR/mediaqueries-5/#valdef-media-screen
@@ -31,7 +53,18 @@ export type MediaType =
 	| 'aural'
 	| 'speech';
 
+/**
+ * Type of acceptable values for a media feature:
+ *  - `discrete`: a feature that take values from a set with no intrinsic order
+ *  - `range`: a feature that take values from a range, where all values are comparable
+ * @see https://drafts.csswg.org/mediaqueries-5/#mq-ranges
+ */
 export type MediaFeatureType = 'range' | 'discrete';
+
+/**
+ * An integer with value '0' or '1'.
+ * @see https://drafts.csswg.org/mediaqueries-5/#typedef-mq-boolean
+ */
 export type MqBoolean = 0 | 1;
 
 // Viewport/page characteristics media features
