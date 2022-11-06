@@ -19,7 +19,15 @@
 <ul class="tsd-signatures tsd-kind-function">
 <li class="tsd-signature tsd-anchor-link" id="matchMediaFeature">match<wbr/>Media<wbr/>Feature<span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type" data-tsd-kind="Type parameter">F</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span>feature<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type" data-tsd-kind="Type parameter">F</span>, value<span class="tsd-signature-symbol">: </span><a href="../types/MqFeatureValue.html" class="tsd-signature-type" data-tsd-kind="Type alias">MqFeatureValue</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type" data-tsd-kind="Type parameter">F</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">MediaQueryList</span><a href="#matchMediaFeature" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" id="icon-anchor-a"></path><path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" id="icon-anchor-b"></path><path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" id="icon-anchor-c"></path></svg></a></li>
 <li class="tsd-description">
-<div class="tsd-comment tsd-typography"><table>
+<div class="tsd-comment tsd-typography"><p>A thin TypeScript wrapper over the <code>window.matchMedia()</code> API,
+providing intelliSense for names and values of media query features.</p>
+
+<h3>Example</h3><pre><code class="language-ts"><span class="hl-1">import</span><span class="hl-0"> { matchmediaFeature } </span><span class="hl-1">from</span><span class="hl-0"> </span><span class="hl-2">&#39;@neoncitylights/typed-css-utils`</span><span class="hl-7">;</span><br/><br/><span class="hl-1">const</span><span class="hl-0"> </span><span class="hl-4">userPrefersDark</span><span class="hl-1">:</span><span class="hl-0"> </span><span class="hl-5">MediaQueryList</span><span class="hl-0"> </span><span class="hl-1">=</span><span class="hl-0"> </span><span class="hl-6">matchMediaFeature</span><span class="hl-0">(</span><span class="hl-2">&#39;prefers-color-scheme&#39;</span><span class="hl-0">, </span><span class="hl-2">&#39;dark&#39;</span><span class="hl-0">);</span><br/><span class="hl-1">const</span><span class="hl-0"> </span><span class="hl-4">prefersLessMotion</span><span class="hl-1">:</span><span class="hl-0"> </span><span class="hl-5">MediaQueryList</span><span class="hl-0"> </span><span class="hl-1">=</span><span class="hl-0"> </span><span class="hl-6">matchMediaFeature</span><span class="hl-0">(</span><span class="hl-2">&#39;prefers-reduced-motion&#39;</span><span class="hl-0">, </span><span class="hl-2">&#39;reduce&#39;</span><span class="hl-0">);</span>
+</code></pre>
+
+<h3>Note</h3><p>Global browser support is at 99.65% global support as of
+November 2022, and therefore stable to use.</p>
+<table>
 <thead>
 <tr>
 <th align="center">Chrome</th>
@@ -57,7 +65,7 @@
 <h5>value: <a href="../types/MqFeatureValue.html" class="tsd-signature-type" data-tsd-kind="Type alias">MqFeatureValue</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type" data-tsd-kind="Type parameter">F</span><span class="tsd-signature-symbol">&gt;</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">MediaQueryList</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/neoncitylights/typed-css-utils/blob/f561b9c/src/matchMedia.ts#L9">matchMedia.ts:9</a></li></ul></aside></li></ul></section></div>
+<li>Defined in <a href="https://github.com/neoncitylights/typed-css-utils/blob/df6a3e0/src/matchMedia.ts#L22">matchMedia.ts:22</a></li></ul></aside></li></ul></section></div>
 <div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 <div class="tsd-navigation settings">
 <details class="tsd-index-accordion"><summary class="tsd-accordion-summary">
