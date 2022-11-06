@@ -18,7 +18,7 @@ npm install @neoncitylights/typed-css-utils
 ## Usage
 Using TypeScript, you can receive type intelliSense, which provides autocomplete suggestions for:
  - CSS property names and values (through `csstype`)
- - Media feature names (e.g `@prefers-color-scheme`, `aspect-ratio`)
+ - Media feature names (e.g `prefers-color-scheme`, `aspect-ratio`)
 
 ```ts
 import { matchMediaFeature, cssSupports } from '@neoncitylights/typed-css-utils';
