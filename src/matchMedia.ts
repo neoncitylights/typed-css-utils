@@ -16,8 +16,8 @@
  * | :-----: | :------: | :-----: | :------: | :------: |
  * |  **9**  |  **12**  | **5.1** | **12.1** | **12.1** |
  *
- * @see https://caniuse.com/matchmedia
- * @see https://w3c.github.io/csswg-drafts/cssom-view/#dom-window-matchmedia
+ * @see [Can I use? / Browser support for `matchMedia()`](https://caniuse.com/matchmedia)
+ * @see [W3C CSSOM View Module (**Editor's Draft**)](https://w3c.github.io/csswg-drafts/cssom-view/#dom-window-matchmedia)
  */
 export function matchMediaFeature<F extends MqFeature>(feature: F, value: MqFeatureValue<F>): MediaQueryList {
 	return window.matchMedia(`(${feature}: ${value})`);
@@ -36,9 +36,9 @@ export type MqFeatureValue<K extends MqFeature> = MediaQueries[K];
  * @note The media types `tty`, `tv`, `projection`, `handheld`, `braille`,
  * `embossed`, `speech`, and `aural` are not usable in media queries; user
  * agents must make them match nothing.
- * @see https://www.w3.org/TR/mediaqueries-5/#valdef-media-all
- * @see https://www.w3.org/TR/mediaqueries-5/#valdef-media-print
- * @see https://www.w3.org/TR/mediaqueries-5/#valdef-media-screen
+ * @see [CSS Media Queries Level 5 (**Editor's Draft**) § Definition of `all`](https://www.w3.org/TR/mediaqueries-5/#valdef-media-all)
+ * @see [CSS Media Queries Level 5 (**Editor's Draft**) § Definition of `print`](https://www.w3.org/TR/mediaqueries-5/#valdef-media-print)
+ * @see [CSS Media Queries Level 5 (**Editor's Draft**) § Definition of `screen`](https://www.w3.org/TR/mediaqueries-5/#valdef-media-screen)
  */
 export type MediaType =
 	| 'all'
@@ -57,13 +57,14 @@ export type MediaType =
  * Type of acceptable values for a media feature:
  *  - `discrete`: a feature that take values from a set with no intrinsic order
  *  - `range`: a feature that take values from a range, where all values are comparable
- * @see https://drafts.csswg.org/mediaqueries-5/#mq-ranges
+ *
+ * @see [Media Queries Level 5 (**Editor's Draft**)](https://drafts.csswg.org/mediaqueries-5/#mq-ranges)
  */
 export type MediaFeatureType = 'range' | 'discrete';
 
 /**
  * An integer with value '0' or '1'.
- * @see https://drafts.csswg.org/mediaqueries-5/#typedef-mq-boolean
+ * @see [Media Queries Level 5 (**Editor's Draft**)](https://drafts.csswg.org/mediaqueries-5/#typedef-mq-boolean)
  */
 export type MqBoolean = 0 | 1;
 
