@@ -4,13 +4,13 @@
  * 
  * @example
  * ```ts
- * import { matchmediaFeature } from '@neoncitylights/typed-css-utils`;
+ * import { matchMediaFeature } from '@neoncitylights/typed-css-utils`;
  * 
  * const userPrefersDark: MediaQueryList = matchMediaFeature('prefers-color-scheme', 'dark');
  * const prefersLessMotion: MediaQueryList = matchMediaFeature('prefers-reduced-motion', 'reduce');
  * ```
- * @note Global browser support is at 99.65% global support as of
- * November 2022, and therefore stable to use.
+ * @note Global browser support is at 99.65% as of November 2022,
+ * and therefore stable to use.
  * 
  * | Chrome  |   Edge   | Safari  | Firefox  |  Opera   |
  * | :-----: | :------: | :-----: | :------: | :------: |
