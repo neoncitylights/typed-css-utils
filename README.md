@@ -1,4 +1,4 @@
-# Typed CSS utils
+# Typed CSS utilities
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![GitHub deployments](https://img.shields.io/github/deployments/neoncitylights/typed-css-utils/github-pages?label=deploy)](https://github.com/neoncitylights/typed-css-utils/deployments/activity_log?environment=github-pages)
 [![Node.js workflow](https://github.com/neoncitylights/typed-css-utils/actions/workflows/main.yml/badge.svg)](https://github.com/neoncitylights/typed-css-utils/actions/workflows/main.yml)
