@@ -19,7 +19,7 @@ npm install @neoncitylights/typed-css-utils
 [Auto-generated API documentation is available](https://neoncitylights.github.io/typed-css-utils/).
 
 ### API reference
-> Note: The public API below is an excerpt and shows the *main* symbols that a developer is likely to use.
+> **Note**: The public API below is an excerpt and shows the *main* symbols that a developer is likely to use.
 
  - `fn`: <a href="#cssSupports">#</a> **cssSupports**(*property*, *value*): *boolean* • [source](./src/cssSupports.ts), [docs](https://neoncitylights.github.io/typed-css-utils/types/cssSupports.html)
  - `fn`: <a href="#matchMediaFeature">#</a> **matchMediaFeature**(*mediaFeature*, *value*): MediaQueryList • [source](./src/matchMedia.ts), [docs](https://neoncitylights.github.io/typed-css-utils/types/matchMediaFeature.html)
