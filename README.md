@@ -4,6 +4,9 @@
 [![Node.js workflow](https://github.com/neoncitylights/typed-css-utils/actions/workflows/main.yml/badge.svg)](https://github.com/neoncitylights/typed-css-utils/actions/workflows/main.yml)
 [![NPM package](https://img.shields.io/npm/v/@neoncitylights/typed-css-utils)](https://www.npmjs.com/package/@neoncitylights/typed-css-utils)
 
+> [!IMPORTANT]
+> This package still exists, but has moved to the [neoncitylights/types](https://github.com/neoncitylights/types/tree/main/packages/typed-http) monorepo.
+
 This library provides a set of utilities extending the `csstype` package to help you write typed CSS in TypeScript.
 
 Currently, there's basic support for the following W3C standards:
